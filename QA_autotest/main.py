@@ -1,7 +1,7 @@
 import requests
 
 URL = 'https://api.pokemonbattle.ru/v2'
-TOKEN = '3ce1618dd4ebcaf44234ae54647e55b6'
+TOKEN = 'YOUR_TOKEN'
 HEADER = {'Content-Type' : 'application/json', 'trainer_token':TOKEN}
 body_creation = {
     "name": "mick",
@@ -17,7 +17,7 @@ body_add = {
     "pokemon_id": "294356"
 }
 
-'''response_creation = requests.post(url = f'{URL}/pokemons', headers = HEADER, json = body_creation)
+response_creation = requests.post(url = f'{URL}/pokemons', headers = HEADER, json = body_creation)
 print(response_creation.text)
 
 response_edit = requests.put(url = f'{URL}/pokemons', headers = HEADER, json = body_edit)
@@ -27,6 +27,6 @@ response_add = requests.post(url = f'{URL}/trainers/add_pokeball', headers= HEAD
 print(response_add.text)
 
 pokemon_id = response_creation.json()['id']
-print(pokemon_id)'''
+print(pokemon_id)
 
 
